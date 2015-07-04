@@ -1,0 +1,44 @@
+buildscript {
+	ext {
+		pipo_version = '0.5.0'
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+jar {
+    baseName = 'sparkj'
+    version = '1.0.0-SNAPSHOT'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+	// pippo deps -----------
+    compile("ro.pippo:pippo-core:$pipo_version")
+    compile("ro.pippo:pippo-controller:$pipo_version")
+    compile("ro.pippo:pippo-fastjson:$pipo_version")
+    compile("ro.pippo:pippo-freemarker:$pipo_version")
+    compile("ro.pippo:pippo-metrics:$pipo_version")
+	compile("ro.pippo:pippo-undertow:$pipo_version")
+
+	// slf4
+	compile("org.slf4j:slf4j-simple:1.7.7")
+
+	//--- gson
+	compile("com.google.code.gson:gson:2.3.1")
+	
+	// -- wejars
+	compile("org.webjars:bootstrap:3.3.1")
+	compile("org.webjars:font-awesome:4.2.0")
+
+	// -- commons jars
+	compile('commons-net:commons-net:3.3')		
+	
+}
