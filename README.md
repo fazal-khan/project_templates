@@ -1,4 +1,4 @@
 # project_templates
 
-This project is intended to have sample projects
+Sample maven and gradle projects to start with.
 ------------------------------------------------
